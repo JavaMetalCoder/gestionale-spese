@@ -1,0 +1,8 @@
+footer {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--bs-info) !important;
+}
