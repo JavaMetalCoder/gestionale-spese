@@ -1,6 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal, WritableSignal } from '@angular/core';
+import { Expense } from '../type/spesa';
 
 @Injectable({
   providedIn: 'root',
 })
-export class SpesaService {}
+export class SpesaService {
+  private _allExpense: WritableSignal<Expense[]> = signal([]);
+  readonly allExpense = this._allExpense.asReadonly();
+
+  public setExpenses(expenseArr: Expense[]): void {
+    this._allExpense.set(expenseArr);
+
+  }
+
+  public addExpence(expense: Expense): void {
+    this._allExpense.update(prev => [...prev, expense])
+  }
+}

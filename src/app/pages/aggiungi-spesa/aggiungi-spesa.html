@@ -1,1 +1,38 @@
-<p>aggiungi-spesa works!</p>
+<section class="container">
+  <h2>Aggiungi Spesa</h2>
+  <form class="d-flex flex-column justify-content-between gap-2 p-2 m-2 align-items-center w-75" >
+    <div class="input-group">
+        <label for="importo" class="form-label m-2">
+          Importo:
+        </label>
+        <input class="form-control m-2" type="text" id="importo" placeholder="Inserisci l'importo">
+    </div>
+    <div class="input-group">
+        <label class="form-label m-2" for="categoria">
+          Categoria:
+        </label>
+        <select class="form-select m-2" name="categoria" id="categoria">
+          <option value="">Scegli Categoria</option>
+          <option value="Spesa">Spesa</option>
+          <option value="Auto">Auto</option>
+          <option value="Regali">Regali</option>
+          <option value="Rate">Rate</option>
+          <option value="Prestito">Prestito</option>
+        </select>
+        <button class="btn btn-info m-2" type="button" role="button" disabled>Aggiungi Nuova Categoria</button>
+    </div>
+    <div class="input-group">
+      <label class="form-label m-2" for="descrizione">
+        Descrizione:
+      </label>
+      <textarea class="form-control" name="descrizione" id="descrizione" cols="10" rows="10" placeholder="(Opzionale)"></textarea>
+    </div>
+    <div class="input-group">
+      <label class="form-label m-2" for="data">
+        Data Spesa: 
+      </label>
+      <input class="m-2" type="date" name="data" id="data">
+    </div>
+    <button class="btn btn-primary m-2 p-1" type="submit">Aggiungi</button>
+  </form>
+</section>
