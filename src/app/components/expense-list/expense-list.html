@@ -2,13 +2,19 @@
 
 @if (ex) {
   
-<div class="card" style="width: 18rem;">
+<div class="card d-flex justify-content-around align-items-start" >
   <div class="card-body">
     <h4 class="card-title">{{ex.title}}</h4>
     <h5 class="card-subtitle mb-2 text-body-secondary">{{ex.importo | currency:'EUR'}}</h5>
     <h6 class="card-subtitle mb-2 text-body-secondary">{{ex.categoria | uppercase}}</h6>
-  <p class="card-text">{{ex.descrizione ? ex.descrizione : 'Nessuna descrizione!'}}</p>
+    <p class="card-text">{{ex.descrizione ? ex.descrizione : 'Nessuna descrizione!'}}</p>
     
+  </div>
+
+  <div class="card-body button">
+    <button type="button" class="btn btn-info">Modifica</button>
+    <button type="button" class="btn btn-danger">Elimina</button>
+    <button type="button" class="btn btn-primary">Dettaglio</button>
   </div>
 </div>
 }

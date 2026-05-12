@@ -1,0 +1,18 @@
+
+
+button {
+  font-size: .8rem;
+  padding: 2.5px;
+  margin: 3px;
+}
+
+.card-body.button {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-body.button {
+  pointer-events: auto;
+  opacity: 1;
+}
