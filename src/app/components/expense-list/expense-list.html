@@ -1,6 +1,6 @@
 @let ex = expense();
 
-@if (ex) {
+
   
 <div class="card d-flex justify-content-around align-items-start" >
   <div class="card-body">
@@ -13,10 +13,9 @@
 
   <div class="card-body button">
     <button type="button" class="btn btn-info"
-    (click)="onUpdate">Modifica</button>
+    (click)="onUpdateFunc(ex.id)">Modifica</button>
     <button type="button" class="btn btn-danger"
-    (click)="onRemove">Elimina</button>
+    (click)="onRemoveFunc(ex.id)">Elimina</button>
     <button type="button" class="btn btn-primary">Dettaglio</button>
   </div>
 </div>
-}

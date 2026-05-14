@@ -22,5 +22,9 @@ export class RiepilogoSpesa {
 
   }
 
+  updateExpense(id: string, ): void {
+    
+  }
+
   
 }

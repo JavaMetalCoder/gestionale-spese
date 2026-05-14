@@ -8,3 +8,10 @@ export interface Expense {
   categoria: string;
   data: DataISO;
 }
+
+export type ExpensePatch = Partial<Omit<Expense, 'id'>>;
+
+export type UpdateExpenseEvent = {
+  id: string,
+  patch: ExpensePatch
+}
